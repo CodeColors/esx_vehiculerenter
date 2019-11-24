@@ -41,7 +41,6 @@ CREATE TABLE `renting_vehicules` (
 	`vehicle` varchar(60) NOT NULL,
 	`plate` varchar(12) NOT NULL,
 	`renter` varchar(255) NOT NULL,
-	`rent_price` int(11) NOT NULL,
 	`remaining` int(11) NOT NULL,
 	`owner` varchar(255) NOT NULL,
 
@@ -68,4 +67,13 @@ CREATE TABLE `vehicle_2brent` (
 	`category` varchar(255) NOT NULL,
 	
 	PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `used_vehicle` (
+	`client` VARCHAR(50) NOT NULL,
+	`model` VARCHAR(50) NOT NULL,
+	`plate` VARCHAR(50) NOT NULL,
+	`price` int(11) NOT NULL,
+
+	PRIMARY KEY (`plate`)
 );
